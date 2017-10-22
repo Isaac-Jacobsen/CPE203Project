@@ -79,7 +79,7 @@ final class Entity {
       else
       {
          scheduler.scheduleEvent(this,
-                 Action.createActivityAction(this, world, imageStore),
+                 new Activity(this, world, imageStore),
                  this.actionPeriod);
       }
    }
@@ -94,7 +94,7 @@ final class Entity {
               !this.transformNotFull(world, scheduler, imageStore))
       {
          scheduler.scheduleEvent(this,
-                 Action.createActivityAction(this, world, imageStore),
+                 new Activity(this, world, imageStore),
                  this.actionPeriod);
       }
    }
@@ -138,7 +138,8 @@ final class Entity {
       }
 
       scheduler.scheduleEvent(this,
-              Action.createActivityAction(this, world, imageStore),
+              new Activity(this, world, imageStore) {
+              },
               nextPeriod);
    }
 
@@ -164,7 +165,7 @@ final class Entity {
       }
 
       scheduler.scheduleEvent(this,
-              Action.createActivityAction(this, world, imageStore),
+              new Activity(this, world, imageStore),
               this.actionPeriod);
    }
 

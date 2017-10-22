@@ -70,46 +70,46 @@ final class EventScheduler
       {
          case MINER_FULL:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
-            this.scheduleEvent(entity, Action.createAnimationAction(entity, 0),
+            this.scheduleEvent(entity, new Animation(entity, 0),
                     entity.getAnimationPeriod());
             break;
 
          case MINER_NOT_FULL:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
             this.scheduleEvent(entity,
-                    Action.createAnimationAction(entity, 0), entity.getAnimationPeriod());
+                    new Animation(entity, 0), entity.getAnimationPeriod());
             break;
 
          case ORE:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
             break;
 
          case ORE_BLOB:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
             this.scheduleEvent(entity,
-                    Action.createAnimationAction(entity, 0), entity.getAnimationPeriod());
+                    new Animation(entity, 0), entity.getAnimationPeriod());
             break;
 
          case QUAKE:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
             this.scheduleEvent(entity,
-                    Action.createAnimationAction(entity, Functions.QUAKE_ANIMATION_REPEAT_COUNT),
+                    new Animation(entity, Functions.QUAKE_ANIMATION_REPEAT_COUNT),
                     entity.getAnimationPeriod());
             break;
 
          case VEIN:
             this.scheduleEvent(entity,
-                    Action.createActivityAction(entity, world, imageStore),
+                    new Activity(entity, world, imageStore),
                     entity.actionPeriod());
             break;
 
