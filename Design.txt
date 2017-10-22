@@ -1,0 +1,4 @@
+processLine - This function could be put in either WorldModel or ImageStore. I put it in WorldModel because the world argument was used more and the function was doing things in the"world".
+nearestEntity and findNearest - I am leaving these functions in the Functions class because they take a list of entities and a point. I don't wan't to put it in the point class because they are acting on entites and I dont know how to rewrite the method to take a list from within the class.
+execute___Activity - I debated where to put these for a while. I ultimately decided to put them in Entity because it seemed the the entities where the ones executing said activities.
+processImageLine - This one was weird because some of the variables it calls are private in the Functions class. I ended up making those attributes public but this could be reversed later.
